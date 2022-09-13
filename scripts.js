@@ -4,7 +4,9 @@ const reader = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
-
+const mathSymbol = input[0];
+const num1 = Number(input[10]);
+const num2 = Number(input[12]);
 
 
 reader.question("What would you like to calculate?", function(input){
