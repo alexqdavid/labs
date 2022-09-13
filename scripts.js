@@ -5,30 +5,33 @@ const reader = readline.createInterface({
   output: process.stdout,
 });
 
-    const mathSymbol = input[0];
-	const num1 = Number(input[2]);
-	const num2 = Number(input[4]);
-	if (mathSymbol === "+"){
-	console.log(num1 + num2);
-	}
-
 reader.question("What would you like to calculate?", function(input){
 	const tokens = input.split(' ');
 	
-	const mathSymbol = tokens[0];
+   const mathSymbol = tokens[0];
 	const num1 = Number(tokens[1]);
 	const num2 = Number(tokens[2]);
 
-    if (mathSymbol === "sqrt"){
+   console.log('mathSymbol', mathSymbol);
+	console.log('num1', num1);
+   console.log('num2', num2);
+   
+   if (mathSymbol === "+"){
+      console.log(num1 + num2);
+        }
+   else if (mathSymbol === "sqrt"){
         console.log(math.sprt(num1));
-    }
-    if (mathSymbol === '-'){
+     }
+   else if (mathSymbol === '-'){
         console.log(num1 - num2);
-    }
-    if (mathSymbol === "/");{
+     }
+   else if (mathSymbol === "/"){
         console.log(num1 / num2);
         }
-    if (mathSymbol ==="*"){
+   else if (mathSymbol === "*"){
         console.log(num1 * num2);
+     }
+   else {console.log("wrong");
     }
+    reader.close()
 });
